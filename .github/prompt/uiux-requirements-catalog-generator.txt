@@ -1,0 +1,41 @@
+Use this prompt pattern in agent mode:
+
+Generate a Requirements Catalog in Output\Agent_1_uiux-requirements-catalog-generator.
+
+Figma Scope:
+<Journey Name>
+
+HLD Scope:
+<Feature / Module Name>
+
+Output File:
+<filename.md>
+
+Optional Figma Source:
+<path or blank>
+
+Optional HLD Source:
+<path or blank>
+
+Rules:
+
+Use only scoped content.
+Ignore unrelated journeys/screens/HLD sections.
+Generate only Requirements Catalog (no test cases).
+Include Traceability Notes with [Figma]/[HLD] tags.
+Include Missing Requirements.
+=============================================
+Example:
+
+Generate a Requirements Catalog.
+
+Figma Scope:
+Mobile PLP
+
+HLD Scope:
+Sales Calculator - New Customer
+
+Output File:
+mobile_plp_flow_from_figma.md
+
+If you omit source paths, the agent will auto-discover files and ask you to choose when multiple candidates exist.

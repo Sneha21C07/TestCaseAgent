@@ -1,0 +1,534 @@
+[
+  {
+    "User_Journey": "Mobile PLP - Page shell",
+    "TOM Description": "Validate Mobile PLP page shell, quote context, and category tabs",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Category tabs show mobile phones, tablets & mbb, bundles, wearables, and accessories. | Input: N/A | Expected: Category tabs show mobile phones, tablets & mbb, bundles, wearables, and accessories.\n6. Action: Click | Target: Create Quote | Input: N/A | Expected: Quote created and PDF available\n7. Action: Verify | Target: No redirect to fixed plp occurs. | Input: N/A | Expected: No redirect to fixed plp occurs.",
+    "Post_Verification": "Quote header shows customer John Citizen and quote number 1234567890.\nCoverage summary shows 4G - Available, 5G - Outdoor only, 5G NSA - Not available.\nTabs Mobile phones, Tablets & MBB, Bundles, Wearables, and Accessories are visible with Mobile phones active.",
+    "TOM_NUM": "TOM_01"
+  },
+  {
+    "User_Journey": "Mobile PLP - Mobile phones tab default",
+    "TOM Description": "Validate default controls and cards on Mobile phones tab",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Controls: search, sort by, filter by brand, check delivery estimate, and same as coverage check. | Input: N/A | Expected: Controls: search, sort by, filter by brand, check delivery estimate, and same as coverage check.\n7. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n8. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Controls Search, Sort by, Filter by brand, Check delivery estimate, and Same as coverage check are visible.\nEach visible device card shows stock state, price, attributes, Check store stock, and Select.\nAt least one plan tile shows proposition and entitlement fields with an enabled Select action.",
+    "TOM_NUM": "TOM_02"
+  },
+  {
+    "User_Journey": "Mobile PLP - Mobile phones pagination",
+    "TOM Description": "Validate item counter and carousel pagination behavior",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Item counter such as 1-3 of 50 items is displayed. | Input: N/A | Expected: Item counter such as 1-3 of 50 items is displayed.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Move carousel forward using next arrow.\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Move carousel backward using previous arrow.\n8. Action: Verify | Target: Card set changes and returns without breaking selected tab context. | Input: N/A | Expected: Card set changes and returns without breaking selected tab context.",
+    "Post_Verification": "Item counter is displayed in n-m of total format (for example 1-3 of 50 items).\nClicking next arrow changes the visible card set and counter range.\nClicking previous arrow returns to the prior card set while staying on Mobile phones tab.",
+    "TOM_NUM": "TOM_03"
+  },
+  {
+    "User_Journey": "Mobile PLP - Add to cart validation no selection",
+    "TOM Description": "Validate Add to cart when no device and no plan are selected",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Keep all device tiles unselected.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Keep all plan tiles unselected.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Validation region above listing tabs. | Input: N/A | Expected: Validation region above listing tabs.",
+    "Post_Verification": "Validation message Please select plan or device. is shown.\nAdd to cart is blocked.\nNo new service row is created.",
+    "TOM_NUM": "TOM_04"
+  },
+  {
+    "User_Journey": "Mobile PLP - Add to cart validation missing plan",
+    "TOM Description": "Validate Add to cart when device is selected but plan is missing",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Cart and validation area. | Input: N/A | Expected: Cart and validation area.",
+    "Post_Verification": "Validation message Please select plan. is shown.\nAdd to cart is blocked until a plan is selected.\nNo cart success message is shown.",
+    "TOM_NUM": "TOM_05"
+  },
+  {
+    "User_Journey": "Mobile PLP - Plan-first selection",
+    "TOM Description": "Validate plan-first selection updates Selected state",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Plan | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: Plan state changes to selected. | Input: N/A | Expected: Plan state changes to selected.\n7. Action: Verify | Target: Compatible devices remain selectable. | Input: N/A | Expected: Compatible devices remain selectable.\n8. Action: Click | Target: Clear selection and confirm Selected state resets | Input: N/A | Expected: Clear selection and confirm Selected state resets activated",
+    "Post_Verification": "Selected state is applied only to the tapped plan tile.\nDevice list refreshes to compatible options for the selected plan.\nClear selection removes the Selected state and returns plan/device list to pre-selection state.",
+    "TOM_NUM": "TOM_06"
+  },
+  {
+    "User_Journey": "Mobile PLP - Device-first selection",
+    "TOM Description": "Validate device-first flow and compatible plan refresh",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: Device tile changes to selected. | Input: N/A | Expected: Device tile changes to selected.\n7. Action: Verify | Target: Plans list refreshes for compatible plans. | Input: N/A | Expected: Plans list refreshes for compatible plans.\n8. Action: Click | Target: Plan | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Selected state is applied only to the tapped device tile.\nPlan list refreshes and only compatible plans remain selectable.\nSelecting one compatible plan marks that plan as Selected for the same service context.",
+    "TOM_NUM": "TOM_07"
+  },
+  {
+    "User_Journey": "Mobile PLP - Add to cart success",
+    "TOM Description": "Validate successful add to cart for device plus plan",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Optionally populate delivery using Same as coverage check when enabled.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: New service row appears in new services section. | Input: N/A | Expected: New service row appears in new services section.",
+    "Post_Verification": "Message shown: Cart updated.\nMessage shown: Changes have been made to your order successfully..\nA new service row is created with Edit controls.",
+    "TOM_NUM": "TOM_08"
+  },
+  {
+    "User_Journey": "Mobile PLP - Service added toast",
+    "TOM Description": "Validate Service added to cart notification state",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Complete a valid add-to-cart action.\n6. Action: Verify | Target: Top notification region. | Input: N/A | Expected: Top notification region.\n7. Action: Verify | Target: Service added to cart state appears before steady cart state. | Input: N/A | Expected: Service added to cart state appears before steady cart state.\n8. Action: Verify | Target: User remains in mobile plp and can continue selection. | Input: N/A | Expected: User remains in mobile plp and can continue selection.",
+    "Post_Verification": "Service-added notification appears in the top message area.\nMessage shown: Cart updated.\nUser remains on Mobile PLP and can continue selection.",
+    "TOM_NUM": "TOM_09"
+  },
+  {
+    "User_Journey": "Mobile PLP - Add second service",
+    "TOM Description": "Validate multi-service flow using Add new service",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Add new service | Input: N/A | Expected: Add new service activated\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Both new service 1 and new service 2 are displayed. | Input: N/A | Expected: Both new service 1 and new service 2 are displayed.",
+    "Post_Verification": "Cart updated is shown after the second Add to cart action.\nChanges have been made to your order successfully. is shown after the cart update.\nNew service 1 and New service 2 are both present, and New service 2 matches the selected plan/device.",
+    "TOM_NUM": "TOM_10"
+  },
+  {
+    "User_Journey": "Mobile PLP - Remove service",
+    "TOM Description": "Validate remove single service action",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: At least two services exist in new services. | Input: N/A | Expected: At least two services exist in new services.\n6. Action: Click | Target: Remove service on one service row | Input: N/A | Expected: Remove service on one service row activated\n7. Action: Verify | Target: The targeted service disappears from the list. | Input: N/A | Expected: The targeted service disappears from the list.\n8. Action: Verify | Target: Totals are recalculated after removal. | Input: N/A | Expected: Totals are recalculated after removal.",
+    "Post_Verification": "Only the clicked service row is removed from New services.\nRemaining service rows stay unchanged with their prior selections.\nRecurring/one-time/total values are recalculated immediately after removal.",
+    "TOM_NUM": "TOM_11"
+  },
+  {
+    "User_Journey": "Mobile PLP - Remove all new services",
+    "TOM Description": "Validate Remove all new services bulk action",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Create multiple new services.\n6. Action: Click | Target: Remove all new services | Input: N/A | Expected: Remove all new services activated\n7. Action: Verify | Target: New services section is cleared. | Input: N/A | Expected: New services section is cleared.\n8. Action: Verify | Target: Quote totals return to empty/new baseline. | Input: N/A | Expected: Quote totals return to empty/new baseline.",
+    "Post_Verification": "Remove all new services clears all rows in the New services section.\nNo New service rows remain after the action.\nRecurring, one-time, and total values return to empty/new baseline.",
+    "TOM_NUM": "TOM_12"
+  },
+  {
+    "User_Journey": "Mobile PLP - Clear selection in listing",
+    "TOM Description": "Validate Clear selection resets selected cards and plans",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Click | Target: Clear selection | Input: N/A | Expected: Clear selection activated\n7. Action: Verify | Target: All selected states are removed in current tab. | Input: N/A | Expected: All selected states are removed in current tab.\n8. Action: Verify | Target: No new service is created. | Input: N/A | Expected: No new service is created.",
+    "Post_Verification": "All Selected markers are removed from device and plan tiles in the current tab.\nNo new row is created in New services.\nAdd to cart remains unavailable until a new valid selection is made.",
+    "TOM_NUM": "TOM_13"
+  },
+  {
+    "User_Journey": "Mobile PLP - Same as coverage check disabled",
+    "TOM Description": "Validate Same as coverage check is disabled before valid coverage context",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Inspect Same as coverage check checkbox.\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt to use it while disabled.",
+    "Post_Verification": "Same as coverage check is visible but disabled before valid coverage context exists.\nTapping the disabled control does not toggle it.\nSuburb/postcode/state fields are not auto-populated while disabled.",
+    "TOM_NUM": "TOM_14"
+  },
+  {
+    "User_Journey": "Mobile PLP - Same as coverage check enabled",
+    "TOM Description": "Validate Same as coverage check populates shipping fields",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Coverage check context is present. | Input: N/A | Expected: Coverage check context is present.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Proceed with selection and add-to-cart.",
+    "Post_Verification": "Same as coverage check can be selected when coverage context is present.\nShipping fields auto-populate with coverage location values (for example Sydney, 2000).\nPopulated shipping values remain present through the subsequent add-to-cart action.",
+    "TOM_NUM": "TOM_15"
+  },
+  {
+    "User_Journey": "Mobile PLP - Search device",
+    "TOM Description": "Validate search filters device cards correctly",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Enter a known device keyword in Search.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Execute search action.\n7. Action: Verify | Target: Results list narrows to matching items. | Input: N/A | Expected: Results list narrows to matching items.\n8. Action: Verify | Target: Default listing returns. | Input: N/A | Expected: Default listing returns.",
+    "Post_Verification": "Search results are reduced to cards matching the entered keyword.\nNon-matching device cards are not shown while the search term is active.\nClearing search restores the default unfiltered listing and item counter range.",
+    "TOM_NUM": "TOM_16"
+  },
+  {
+    "User_Journey": "Mobile PLP - Sort by Most popular",
+    "TOM Description": "Validate Most popular sort applies without navigation loss",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Card order changes and tab context is preserved. | Input: N/A | Expected: Card order changes and tab context is preserved.\n8. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Selecting Most popular changes device card order from the prior order.\nThe selected sort option remains Most popular after list refresh.\nUser stays on Mobile phones tab and can still complete a valid selection.",
+    "TOM_NUM": "TOM_17"
+  },
+  {
+    "User_Journey": "Mobile PLP - Sort by price high",
+    "TOM Description": "Validate Price High sorting option behavior",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Higher priced cards appear first. | Input: N/A | Expected: Higher priced cards appear first.\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Switch to a different sort and back to Price High.\n8. Action: Verify | Target: Sort consistency across repeated toggles. | Input: N/A | Expected: Sort consistency across repeated toggles.",
+    "Post_Verification": "Price High order displays highest priced card first.\nSwitching away and back to Price High reproduces the same descending order.\nTab context and current service context remain unchanged during sort toggles.",
+    "TOM_NUM": "TOM_18"
+  },
+  {
+    "User_Journey": "Mobile PLP - Sort by price low",
+    "TOM Description": "Validate Price Low sorting option behavior",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Lower priced cards appear first. | Input: N/A | Expected: Lower priced cards appear first.\n7. Action: Verify | Target: Ordering remains valid. | Input: N/A | Expected: Ordering remains valid.\n8. Action: Click | Target: Item | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Price Low order displays lowest priced card first.\nNavigating carousel pages keeps Price Low ordering logic applied.\nAny existing selected item remains selected after pagination navigation.",
+    "TOM_NUM": "TOM_19"
+  },
+  {
+    "User_Journey": "Mobile PLP - Filter by brand",
+    "TOM Description": "Validate brand filter options and reset",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Apply brand filter Apple.\n6. Action: Verify | Target: All visible cards belong to apple. | Input: N/A | Expected: All visible cards belong to apple.\n7. Action: Verify | Target: List updates. | Input: N/A | Expected: List updates.\n8. Action: Verify | Target: Baseline list returns. | Input: N/A | Expected: Baseline list returns.",
+    "Post_Verification": "After Apple filter is applied, all visible cards are Apple devices.\nSwitching to Samsung replaces the result set with Samsung cards.\nResetting to Other/All restores the baseline mixed-brand listing.",
+    "TOM_NUM": "TOM_20"
+  },
+  {
+    "User_Journey": "Mobile PLP - Check store stock entry",
+    "TOM Description": "Validate Check store stock option appears for selectable items",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Click | Target: Check store stock for that selected item | Input: N/A | Expected: Check store stock for that selected item activated\n7. Action: Verify | Target: Stock lookup section/state opens for the selected item. | Input: N/A | Expected: Stock lookup section/state opens for the selected item.\n8. Action: Verify | Target: Selected item context is preserved. | Input: N/A | Expected: Selected item context is preserved.",
+    "Post_Verification": "Check store stock opens only for the currently selected device tile.\nThe opened stock lookup context shows the selected SKU context (for example product code MA6A4FE/A).\nReturning to listing keeps the same device tile selected and does not reset current filters.",
+    "TOM_NUM": "TOM_21"
+  },
+  {
+    "User_Journey": "Mobile PLP - Stock state In Stock",
+    "TOM Description": "Validate In Stock visual state and add flow",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Use a card showing In stock status.\n6. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Service is created successfully. | Input: N/A | Expected: Service is created successfully.",
+    "Post_Verification": "In-stock item can be added without stock-warning block.\nMessage shown: Cart updated.\nNew service row appears for the selected device/plan.",
+    "TOM_NUM": "TOM_22"
+  },
+  {
+    "User_Journey": "Mobile PLP - Stock state warning path",
+    "TOM Description": "Validate non-success stock states and warning presentation",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger stock check where warning state is returned.\n6. Action: Verify | Target: Tile-level warning text/symbol. | Input: N/A | Expected: Tile-level warning text/symbol.\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt add-to-cart with that item.\n8. Action: Verify | Target: Expected block or advisory validation message is shown. | Input: N/A | Expected: Expected block or advisory validation message is shown.",
+    "Post_Verification": "Returned stock status is displayed on the tile as Back-order, Low Stock, or Out of Stock.\nOut-of-Stock/Non-Orderable variant shows message Please select another colour/storage option.\nAdd/proceed is blocked for Out-of-Stock/Non-Orderable variants.",
+    "TOM_NUM": "TOM_23"
+  },
+  {
+    "User_Journey": "Mobile PLP - RTSA technical error",
+    "TOM Description": "Validate RTSA technical error handling message",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger stock check with technical error response.\n6. Action: Verify | Target: Warning under impacted item tile. | Input: N/A | Expected: Warning under impacted item tile.\n7. Action: Verify | Target: Message remains visible for that item. | Input: N/A | Expected: Message remains visible for that item.\n8. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart",
+    "Post_Verification": "Warning message shown: Stock availability and/or Estimated Shipment Date check failed....\nWarning remains visible for the impacted item tile.\nAlternate valid item can still be added to cart.",
+    "TOM_NUM": "TOM_24"
+  },
+  {
+    "User_Journey": "Mobile PLP - Plans panel default",
+    "TOM Description": "Validate plans panel content and entitlements",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Inspect plan cards on Mobile phones tab.\n6. Action: Verify | Target: Contract type, national calls, national sms, and idd zone fields render. | Input: N/A | Expected: Contract type, national calls, national sms, and idd zone fields render.\n7. Action: Verify | Target: Critical information summary and rates and charges links are present. | Input: N/A | Expected: Critical information summary and rates and charges links are present.\n8. Action: Click | Target: Plan | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Each plan card shows Contract type, National calls, National SMS, IDD Zone 1, and IDD Zone 2 values.\nCritical information summary and Rates and charges links are visible on plan cards.\nSelecting a plan changes only that plan tile to Selected.",
+    "TOM_NUM": "TOM_25"
+  },
+  {
+    "User_Journey": "Mobile PLP - Plan links open",
+    "TOM Description": "Validate Critical information summary and Rates and charges redirection",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Critical information summary on a plan tile | Input: N/A | Expected: Critical information summary on a plan tile activated\n6. Action: Verify | Target: Destination panel/page opens correctly. | Input: N/A | Expected: Destination panel/page opens correctly.\n7. Action: Click | Target: Rates and charges | Input: N/A | Expected: Rates and charges activated\n8. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens",
+    "Post_Verification": "Clicking Critical information summary opens its destination page/panel.\nClicking Rates and charges opens its destination page/panel.\nBack navigation returns to the same Mobile PLP tab with prior selection state retained.",
+    "TOM_NUM": "TOM_26"
+  },
+  {
+    "User_Journey": "Mobile PLP - Quote max service limit",
+    "TOM Description": "Validate maximum 10 services per quote guardrail",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Add services sequentially until count reaches 10.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt to add 11th service.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Validation and verify first 10 services remain intact. | Input: N/A | Expected: Validation and verify first 10 services remain intact.",
+    "Post_Verification": "Validation message Adding more than 10 services into a quote is not allowed. is shown.\nThe 11th service is blocked.\nExisting 10 services remain unchanged.",
+    "TOM_NUM": "TOM_27"
+  },
+  {
+    "User_Journey": "Mobile PLP - Purchase and offer details open",
+    "TOM Description": "Validate purchase and offer details modal content",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: View purchase & offer details | Input: N/A | Expected: View purchase & offer details activated\n6. Action: Verify | Target: Account level products section. | Input: N/A | Expected: Account level products section.\n7. Action: Verify | Target: Existing services and new services sections. | Input: N/A | Expected: Existing services and new services sections.\n8. Action: Verify | Target: Recurring, one-time, and total summary values are visible. | Input: N/A | Expected: Recurring, one-time, and total summary values are visible.",
+    "Post_Verification": "Purchase and offer details view displays Account level products, Existing services, and New services sections.\nRecurring, one-time, and total summary values are visible in the details view.\nThe values shown in details match the current cart state before close.",
+    "TOM_NUM": "TOM_28"
+  },
+  {
+    "User_Journey": "Mobile PLP - Purchase and offer details close",
+    "TOM Description": "Validate close action returns to same Mobile PLP context",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Close | Input: N/A | Expected: Close activated\n7. Action: Verify | Target: Return to same plp tab and selection context. | Input: N/A | Expected: Return to same plp tab and selection context.\n8. Action: Verify | Target: No service data is lost after closing view. | Input: N/A | Expected: No service data is lost after closing view.",
+    "Post_Verification": "Close exits purchase and offer details and returns to the same Mobile PLP tab.\nService rows and selected plan/device states are unchanged after closing.\nNo recurring/one-time/total values are lost by closing the details view.",
+    "TOM_NUM": "TOM_29"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundle calculation default",
+    "TOM Description": "Validate Calculate Bundle & Save action default flow",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Create eligible cart baseline with multiple services.\n6. Action: Click | Target: Calculate Bundle & Save | Input: N/A | Expected: Calculate Bundle & Save activated\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Wait for processing completion.\n8. Action: Verify | Target: Cart remains editable after calculation. | Input: N/A | Expected: Cart remains editable after calculation.",
+    "Post_Verification": "Message shown: Bundle and save calculation is completed..\nCalculation completes without silent timeout.\nCart remains editable after completion.",
+    "TOM_NUM": "TOM_30"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundle calculation completed note",
+    "TOM Description": "Validate explicit calculation completed note and state persistence",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Run Calculate Bundle & Save on eligible items.\n6. Action: Verify | Target: Completion note text in message area. | Input: N/A | Expected: Completion note text in message area.\n7. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n8. Action: Verify | Target: Calculated state remains persisted. | Input: N/A | Expected: Calculated state remains persisted.",
+    "Post_Verification": "Message shown: Bundle and save calculation is completed..\nCompletion note is still present after tab switch and return.\nCalculated cart state remains unchanged.",
+    "TOM_NUM": "TOM_31"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundle not eligible note",
+    "TOM Description": "Validate non-eligible bundle note",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Prepare a non-eligible cart mix.\n6. Action: Click | Target: Calculate Bundle & Save | Input: N/A | Expected: Calculate Bundle & Save activated\n7. Action: Verify | Target: Not-eligible note text. | Input: N/A | Expected: Not-eligible note text.\n8. Action: Verify | Target: User can still edit cart and proceed with other actions. | Input: N/A | Expected: User can still edit cart and proceed with other actions.",
+    "Post_Verification": "Warning message shown: The items in your cart are not eligible for bundle and save..\nBundle discount is not applied to non-eligible mix.\nUser can still edit cart and continue other actions.",
+    "TOM_NUM": "TOM_32"
+  },
+  {
+    "User_Journey": "Mobile PLP - Values not updated popup",
+    "TOM Description": "Validate pricing stale popup before Create quote/Create order",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Create a stale pricing condition by editing service after last calculation.\n6. Action: Click | Target: Create Quote | Input: N/A | Expected: Quote created and PDF available\n7. Action: Verify | Target: Values not updated popup with guidance text. | Input: N/A | Expected: Values not updated popup with guidance text.\n8. Action: Click | Target: Go back and verify user returns to PLP safely | Input: N/A | Expected: Go back and verify user returns to PLP safely activated",
+    "Post_Verification": "Blocking popup appears with stale-pricing guidance.\nCreate quote/Create order is blocked while values are not updated.\nGo back returns to Mobile PLP without data loss.",
+    "TOM_NUM": "TOM_33"
+  },
+  {
+    "User_Journey": "Mobile PLP - Values popup proceed via recalc",
+    "TOM Description": "Validate recalculation path from blocking popup",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger Values not updated popup.\n6. Action: Click | Target: Calculate Bundle & Save from popup | Input: N/A | Expected: Calculate Bundle & Save from popup activated\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Wait for completion message.\n8. Action: Click | Target: Create Quote | Input: N/A | Expected: Quote created and PDF available",
+    "Post_Verification": "Recalculation starts from popup and completes successfully.\nMessage shown: Bundle and save calculation is completed..\nCreate quote/Create order proceeds after recalculation.",
+    "TOM_NUM": "TOM_34"
+  },
+  {
+    "User_Journey": "Mobile PLP - Edit service entry",
+    "TOM Description": "Validate service edit entry and context labeling",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Edit on an existing New service row | Input: N/A | Expected: Edit on an existing New service row activated\n6. Action: Verify | Target: Page shows you are editing new service x. | Input: N/A | Expected: Page shows you are editing new service x.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens",
+    "Post_Verification": "Edit flow header shows You are editing New service X for the selected row.\nCancel editing and Save and add to cart controls are visible in edit context.\nGo back without saving returns to listing with the original service row values unchanged.",
+    "TOM_NUM": "TOM_35"
+  },
+  {
+    "User_Journey": "Mobile PLP - Cancel editing",
+    "TOM Description": "Validate cancel editing path returns safely without unintended updates",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Change one field intentionally.\n7. Action: Click | Target: Cancel editing or Cancel quote in edit context | Input: N/A | Expected: Cancel editing or Cancel quote in edit context activated\n8. Action: Verify | Target: Previous saved state remains unchanged. | Input: N/A | Expected: Previous saved state remains unchanged.",
+    "Post_Verification": "Cancel editing exits edit/configurator and returns to Mobile PLP service listing.\nUnsaved field changes are discarded.\nPreviously saved service values remain unchanged in New services.",
+    "TOM_NUM": "TOM_36"
+  },
+  {
+    "User_Journey": "Mobile PLP - Create quote action",
+    "TOM Description": "Validate Create quote action availability and redirection",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Cart and pricing are valid. | Input: N/A | Expected: Cart and pricing are valid.\n6. Action: Click | Target: Create Quote | Input: N/A | Expected: Quote created and PDF available\n7. Action: Verify | Target: Navigation to next quote step/view. | Input: N/A | Expected: Navigation to next quote step/view.\n8. Action: Verify | Target: Plp state can be resumed if applicable. | Input: N/A | Expected: Plp state can be resumed if applicable.",
+    "Post_Verification": "Clicking Create quote navigates to the next quote step/view.\nA quote reference remains associated with the same session after navigation.\nReturning to Mobile PLP resumes the same quote with prior service selections intact.",
+    "TOM_NUM": "TOM_37"
+  },
+  {
+    "User_Journey": "Mobile PLP - Create order action",
+    "TOM Description": "Validate Create order action availability and redirection",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Cart and pricing are valid. | Input: N/A | Expected: Cart and pricing are valid.\n6. Action: Click | Target: Create Order | Input: N/A | Expected: Order creation flow opens\n7. Action: Verify | Target: Navigation to next order flow page. | Input: N/A | Expected: Navigation to next order flow page.\n8. Action: Verify | Target: No unintended redirect to fixed plp occurs. | Input: N/A | Expected: No unintended redirect to fixed plp occurs.",
+    "Post_Verification": "Clicking Create order navigates to the order flow page from Mobile PLP.\nNavigation keeps the same quote/order context and does not redirect to Fixed PLP.\nSelected services from PLP remain present in the next order step context.",
+    "TOM_NUM": "TOM_38"
+  },
+  {
+    "User_Journey": "Mobile PLP - Save quote and exit",
+    "TOM Description": "Validate Save quote and exit redirection and resume readiness",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Build at least one valid mobile service in cart.\n6. Action: Click | Target: Save quote and exit | Input: N/A | Expected: Save quote and exit activated\n7. Action: Verify | Target: User is redirected to expected parent/search context. | Input: N/A | Expected: User is redirected to expected parent/search context.\n8. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens",
+    "Post_Verification": "Changes have been made to your order successfully. is displayed after Save quote and exit.\nUser is redirected to the expected parent/search quote context.\nRe-opening the saved quote restores prior Mobile PLP selections and service rows.",
+    "TOM_NUM": "TOM_39"
+  },
+  {
+    "User_Journey": "Mobile PLP - Tablets and MBB tab",
+    "TOM Description": "Validate Tablets & MBB tab end-to-end selection flow",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Switch to Tablets & MBB tab.\n6. Action: Verify | Target: Search, filter, sort, and delivery controls are visible. | Input: N/A | Expected: Search, filter, sort, and delivery controls are visible.\n7. Action: Click | Target: Tab | Input: N/A | Expected: Selected state applied\n8. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart",
+    "Post_Verification": "Tablets & MBB controls are visible and interactive.\nMessage shown: Cart updated after valid add.\nNew service row is created for selected tablet/MBB plan.",
+    "TOM_NUM": "TOM_40"
+  },
+  {
+    "User_Journey": "Mobile PLP - Tablets and MBB selected state",
+    "TOM Description": "Validate selected state transitions in Tablets & MBB tab",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Both tiles switch to selected. | Input: N/A | Expected: Both tiles switch to selected.\n8. Action: Verify | Target: Both states reset. | Input: N/A | Expected: Both states reset.",
+    "Post_Verification": "Selected state is applied to the chosen tablet/MBB device and chosen plan only.\nClear selection removes Selected state from both tiles in Tablets & MBB tab.\nNo New service row is created until Add to cart is executed.",
+    "TOM_NUM": "TOM_41"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundles tab",
+    "TOM Description": "Validate Bundles tab list and select behavior",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Switch to Bundles tab.\n6. Action: Verify | Target: Bundle cards and per-month labels appear. | Input: N/A | Expected: Bundle cards and per-month labels appear.\n7. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n8. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart",
+    "Post_Verification": "Bundle card enters Selected state after click.\nMessage shown: Cart updated after Add to cart.\nAdded bundle appears in New services.",
+    "TOM_NUM": "TOM_42"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundles deselect/reset",
+    "TOM Description": "Validate clearing bundle selection",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: Selected status appears. | Input: N/A | Expected: Selected status appears.\n7. Action: Click | Target: Clear selection | Input: N/A | Expected: Clear selection activated\n8. Action: Verify | Target: Bundle selected status is removed and no service is added. | Input: N/A | Expected: Bundle selected status is removed and no service is added.",
+    "Post_Verification": "Selected status appears on the chosen bundle card before reset.\nClear selection removes Selected status from the bundle card.\nNo bundle service is added to New services after reset.",
+    "TOM_NUM": "TOM_43"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearables tab listing",
+    "TOM Description": "Validate wearables listing, controls, and attributes",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Switch to Wearables tab.\n6. Action: Verify | Target: Controls include vendor/brand filter, search, and sort. | Input: N/A | Expected: Controls include vendor/brand filter, search, and sort.\n7. Action: Verify | Target: Wearable attributes such as colour, case size, band, and band size are visible. | Input: N/A | Expected: Wearable attributes such as colour, case size, band, and band size are visible.\n8. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Wearables tab shows search, sort, and vendor/brand filter controls.\nWearable card shows Colour Black, Case size 42mm, Band Sport band, Band size S/M, and Payment term 12 months fields.\nSelecting one wearable marks only that wearable as Selected in current service context.",
+    "TOM_NUM": "TOM_44"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearables max boundary",
+    "TOM Description": "Validate boundary where more than five wearables are blocked",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Add wearable selections up to five for one service.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt to add sixth wearable.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Validation and persisted selection count. | Input: N/A | Expected: Validation and persisted selection count.",
+    "Post_Verification": "Validation appears when a 6th wearable is attempted.\nMaximum allowed wearables per service remains 5.\nSixth wearable is blocked and saved count is unchanged.",
+    "TOM_NUM": "TOM_45"
+  },
+  {
+    "User_Journey": "Mobile PLP - Accessories tab listing",
+    "TOM Description": "Validate accessories listing and APP payment term controls",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Switch to Accessories tab.\n6. Action: Verify | Target: 0 item selected indicator and app payment term control. | Input: N/A | Expected: 0 item selected indicator and app payment term control.\n7. Action: Verify | Target: Accessory card fields including product code and estimated delivery date. | Input: N/A | Expected: Accessory card fields including product code and estimated delivery date.\n8. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Accessories tab shows 0 item selected indicator before any accessory is chosen.\nAPP payment term control is visible with 36 months option, and cards show product code MA6A4FE/A and estimated delivery date format.\nSelecting one accessory changes only that card to Selected for the current service.",
+    "TOM_NUM": "TOM_46"
+  },
+  {
+    "User_Journey": "Mobile PLP - Accessories max boundary",
+    "TOM Description": "Validate boundary where more than ten accessories are blocked",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt to add one more accessory beyond ten.\n7. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n8. Action: Verify | Target: Validation and final accepted count. | Input: N/A | Expected: Validation and final accepted count.",
+    "Post_Verification": "Validation appears when accessory count exceeds 10.\nMaximum allowed accessories per service remains 10.\nOverflow accessories are blocked from cart update.",
+    "TOM_NUM": "TOM_47"
+  },
+  {
+    "User_Journey": "Mobile PLP - Accessories delivery postcode",
+    "TOM Description": "Validate accessory delivery estimate lookup and persistence",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Estimated delivery updates. | Input: N/A | Expected: Estimated delivery updates.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Delivery context is retained in service edit view. | Input: N/A | Expected: Delivery context is retained in service edit view.",
+    "Post_Verification": "Entering Sydney, 2000 refreshes the accessory estimated delivery result for the selected SKU.\nUpdated estimated delivery date is displayed on the accessory card before add to cart.\nAfter add to cart and reopening service edit, the same delivery suburb/postcode context is retained.",
+    "TOM_NUM": "TOM_48"
+  },
+  {
+    "User_Journey": "Mobile PLP - Correct page redirection from tabs",
+    "TOM Description": "Validate every tab action keeps user in Mobile PLP journey",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Return to Mobile phones tab.\n8. Action: Verify | Target: Current quote context and selected services are preserved. | Input: N/A | Expected: Current quote context and selected services are preserved.",
+    "Post_Verification": "Performing actions in each tab keeps navigation inside the Mobile PLP journey.\nReturning to Mobile phones tab shows the same quote reference and existing selected services.\nNo action from any tab redirects to Fixed PLP.",
+    "TOM_NUM": "TOM_49"
+  },
+  {
+    "User_Journey": "Mobile PLP - Footer action persistence",
+    "TOM Description": "Validate footer actions are always present across Mobile PLP tabs",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Footer actions are visible. | Input: N/A | Expected: Footer actions are visible.\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger one benign action and re-check footer visibility.\n8. Action: Verify | Target: No footer action disappears unexpectedly. | Input: N/A | Expected: No footer action disappears unexpectedly.",
+    "Post_Verification": "Footer actions Calculate Bundle & Save, View purchase & offer details, Create quote, and Create order are visible in every Mobile PLP tab.\nAfter one benign action per tab, the same four footer actions remain visible and enabled/disabled per rules.\nNo footer action disappears when switching tabs.",
+    "TOM_NUM": "TOM_50"
+  },
+  {
+    "User_Journey": "Mobile PLP - SIM Only quantity guardrail",
+    "TOM Description": "Validate SIM Only quantity greater than 1 blocks device selection",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n5. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Increase plan quantity to 2 using quantity control.\n7. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n8. Action: Verify | Target: Device tile cannot be selected while quantity is greater than 1. | Input: N/A | Expected: Device tile cannot be selected while quantity is greater than 1.",
+    "Post_Verification": "With SIM Only plan quantity set to 2, device tiles cannot be selected.\nNo device selection state is applied and no device line is added while quantity is greater than 1.\nReducing quantity back to 1 re-enables device selection.",
+    "TOM_NUM": "TOM_51"
+  },
+  {
+    "User_Journey": "Mobile PLP - Plan-first compatible device set",
+    "TOM Description": "Validate plan-first selection shows only compatible devices",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n5. Action: Verify | Target: Plan status changes to selected. | Input: N/A | Expected: Plan status changes to selected.\n6. Action: Verify | Target: Device carousel refresh after plan selection. | Input: N/A | Expected: Device carousel refresh after plan selection.\n7. Action: Verify | Target: Only compatible devices are shown as selectable. | Input: N/A | Expected: Only compatible devices are shown as selectable.",
+    "Post_Verification": "Selected state is applied to the chosen rate plan.\nDevice carousel refreshes immediately after plan selection.\nOnly compatible devices are selectable; non-compatible devices are hidden or disabled.",
+    "TOM_NUM": "TOM_52"
+  },
+  {
+    "User_Journey": "Mobile PLP - Incompatible device block",
+    "TOM Description": "Validate incompatible devices are not selectable after plan-first filtering",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Identify a device outside the compatible set.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Selection is blocked and current compatible selection context remains unchanged. | Input: N/A | Expected: Selection is blocked and current compatible selection context remains unchanged.",
+    "Post_Verification": "Attempting to select a device outside the compatible set is blocked.\nPreviously selected compatible plan remains selected after the blocked attempt.\nNo incompatible device is added to the current service context.",
+    "TOM_NUM": "TOM_53"
+  },
+  {
+    "User_Journey": "Mobile PLP - RTSA re-trigger storage change",
+    "TOM Description": "Validate RTSA API re-triggers when device storage changes",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: Initial stock state on a listed device. | Input: N/A | Expected: Initial stock state on a listed device.\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Change device storage (for example 128GB to another available capacity).\n6. Action: Verify | Target: Stock status refresh occurs for updated sku. | Input: N/A | Expected: Stock status refresh occurs for updated sku.",
+    "Post_Verification": "Changing storage triggers a fresh RTSA check for the updated SKU.\nTile stock status refreshes to the returned state (for example In stock, Low Stock, Back-order, Out of Stock).\nIf returned state is Out of Stock/Non-Orderable, selection/add is blocked and Please select another colour/storage option is shown.",
+    "TOM_NUM": "TOM_54"
+  },
+  {
+    "User_Journey": "Mobile PLP - RTSA re-trigger colour change",
+    "TOM Description": "Validate RTSA API re-triggers when device colour changes",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n5. Action: Verify | Target: Stock status refreshes for the changed colour sku. | Input: N/A | Expected: Stock status refreshes for the changed colour sku.\n6. Action: Verify | Target: Second refresh. | Input: N/A | Expected: Second refresh.",
+    "Post_Verification": "Changing colour triggers a new RTSA request for the new colour SKU.\nDisplayed stock status updates after each colour change.\nOut-of-Stock/Non-Orderable colour blocks selection/add and shows Please select another colour/storage option.",
+    "TOM_NUM": "TOM_55"
+  },
+  {
+    "User_Journey": "Mobile PLP - RTSA re-trigger device change",
+    "TOM Description": "Validate RTSA API re-triggers when device changes via selection/search",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Stock state updates for new device sku. | Input: N/A | Expected: Stock state updates for new device sku.",
+    "Post_Verification": "Switching from Device A to Device B triggers a fresh RTSA check for Device B SKU.\nDisplayed stock status for Device B is updated from the returned RTSA result.\nAny stock warning/banner text for Device B is shown when returned.",
+    "TOM_NUM": "TOM_56"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearable RTSA re-trigger colour",
+    "TOM Description": "Validate wearable RTSA re-triggers on colour change",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n5. Action: Verify | Target: Stock state refresh after colour change. | Input: N/A | Expected: Stock state refresh after colour change.",
+    "Post_Verification": "Changing wearable colour triggers RTSA for the updated wearable SKU.\nTile stock status refreshes after the colour update.\nNon-purchasable returned state blocks progression for that wearable variant.",
+    "TOM_NUM": "TOM_57"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearable RTSA re-trigger case size",
+    "TOM Description": "Validate wearable RTSA re-triggers on case size change",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Change selected wearable Case size.\n5. Action: Verify | Target: Stock state refresh occurs for updated wearable sku. | Input: N/A | Expected: Stock state refresh occurs for updated wearable sku.",
+    "Post_Verification": "Changing case size triggers RTSA for the new wearable SKU.\nWearable tile stock status refreshes to the RTSA result.\nNon-purchasable case-size variant is blocked from progression.",
+    "TOM_NUM": "TOM_58"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearable RTSA re-trigger band",
+    "TOM Description": "Validate wearable RTSA re-triggers on band change",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Provide delivery estimate context.\n5. Action: Verify | Target: UI element | Input: N/A | Expected: Change wearable Band value.\n6. Action: Verify | Target: Stock/availability re-check occurs for changed combination. | Input: N/A | Expected: Stock/availability re-check occurs for changed combination.",
+    "Post_Verification": "Changing band option triggers a fresh RTSA check for the updated wearable combination.\nUpdated stock status is shown on the wearable tile after the band change.\nNon-purchasable result blocks add/proceed for that variant.",
+    "TOM_NUM": "TOM_59"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearable RTSA re-trigger band size",
+    "TOM Description": "Validate wearable RTSA re-triggers on band size change",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Change wearable Band size (for example S/M to another available option).\n5. Action: Verify | Target: Stock state refreshes for updated wearable sku. | Input: N/A | Expected: Stock state refreshes for updated wearable sku.",
+    "Post_Verification": "Changing band size triggers RTSA for the updated wearable SKU.\nStock label refreshes after the band-size change.\nNon-purchasable band-size variant is blocked from progression.",
+    "TOM_NUM": "TOM_60"
+  },
+  {
+    "User_Journey": "Mobile PLP - Dedicated stock status Low Stock",
+    "TOM Description": "Validate Low Stock state rendering and behavior",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger RTSA response with StockAvailability = Low Stock.\n5. Action: Verify | Target: Tile shows low stock state. | Input: N/A | Expected: Tile shows low stock state.\n6. Action: Verify | Target: Low-stock indicator styling is shown. | Input: N/A | Expected: Low-stock indicator styling is shown.\n7. Action: Verify | Target: No silent failure. | Input: N/A | Expected: No silent failure.",
+    "Post_Verification": "Tile displays stock status as Low Stock.\nLow-stock warning indicator is displayed on the tile.\nIf policy allows purchase, user can continue selection/add without silent failure.",
+    "TOM_NUM": "TOM_61"
+  },
+  {
+    "User_Journey": "Mobile PLP - Dedicated stock status Back-order",
+    "TOM Description": "Validate Back-order message and replenishment date rendering",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger RTSA response with StockAvailability = Back Order.\n5. Action: Verify | Target: Tile displays back-order state. | Input: N/A | Expected: Tile displays back-order state.\n6. Action: Verify | Target: Replenishment message and date are shown under item. | Input: N/A | Expected: Replenishment message and date are shown under item.",
+    "Post_Verification": "Tile displays stock status as Back-order.\nMessage Device will ship from (replenishment date) is shown under the item.\nReplenishment date value is visible and tied to the selected variant.",
+    "TOM_NUM": "TOM_62"
+  },
+  {
+    "User_Journey": "Mobile PLP - Dedicated stock status Non-Orderable",
+    "TOM Description": "Validate Non-Orderable maps to Out of Stock and blocks invalid choice",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger RTSA response with StockAvailability = Non-Orderable.\n5. Action: Verify | Target: Item shows out of stock state. | Input: N/A | Expected: Item shows out of stock state.\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Attempt to proceed with that variant selection.\n7. Action: Verify | Target: User guidance is shown to change variant. | Input: N/A | Expected: User guidance is shown to change variant.",
+    "Post_Verification": "Non-Orderable variant is rendered as Out of Stock.\nWarning message shown: Please select another colour/storage option.\nInvalid variant cannot be progressed.",
+    "TOM_NUM": "TOM_63"
+  },
+  {
+    "User_Journey": "Mobile PLP - Check store stock selection gate",
+    "TOM Description": "Validate Check store stock is blocked before device select and enabled after select",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Without selecting any device, attempt Check store stock path.\n5. Action: Verify | Target: Action/section is blocked or not available. | Input: N/A | Expected: Action/section is blocked or not available.\n6. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger Check store stock again.\n8. Action: Verify | Target: Store stock section/path is now available for selected device context. | Input: N/A | Expected: Store stock section/path is now available for selected device context.",
+    "Post_Verification": "Without a selected device, Check store stock path is unavailable or blocked.\nAfter selecting a device tile, Check store stock becomes available for that device context.\nOpened stock section corresponds to the selected device (for example product code MA6A4FE/A).",
+    "TOM_NUM": "TOM_64"
+  },
+  {
+    "User_Journey": "Mobile PLP - Pagination selection persistence",
+    "TOM Description": "Validate selected device/plan state persists during pagination navigation",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n7. Action: Verify | Target: Previously selected device/plan remains retained in current service context. | Input: N/A | Expected: Previously selected device/plan remains retained in current service context.",
+    "Post_Verification": "Device and plan selected before pagination remain selected after moving forward and back.\nItem counter/page range updates on forward navigation and returns on backward navigation.\nCurrent service context remains the same; no extra service row is created by pagination.",
+    "TOM_NUM": "TOM_65"
+  },
+  {
+    "User_Journey": "Mobile PLP - Filter persistence across pagination",
+    "TOM Description": "Validate brand filter persists during pagination and back navigation",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Verify | Target: UI element | Input: N/A | Expected: Apply Filter by brand (for example Apple).\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n7. Action: Verify | Target: Active brand filter remains applied and result set stays filtered. | Input: N/A | Expected: Active brand filter remains applied and result set stays filtered.",
+    "Post_Verification": "Selected brand filter (for example Apple) remains active after pagination forward/backward.\nOpening details and returning does not clear the active brand filter.\nOnly cards from the active brand remain visible until filter is reset.",
+    "TOM_NUM": "TOM_66"
+  },
+  {
+    "User_Journey": "Mobile PLP - Multiple plan selection to separate services",
+    "TOM Description": "Validate multiple selected plans create separate services on Add to cart",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n5. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart\n6. Action: Verify | Target: Each selected rate plan is added under separate service rows. | Input: N/A | Expected: Each selected rate plan is added under separate service rows.\n7. Action: Verify | Target: Service rows are independently editable. | Input: N/A | Expected: Service rows are independently editable.",
+    "Post_Verification": "Cart updated is shown after Add to cart with multiple selected plans.\nEach selected plan is created as a separate New service row.\nNew service rows are independently editable via their own Edit actions.",
+    "TOM_NUM": "TOM_67"
+  },
+  {
+    "User_Journey": "Mobile PLP - Wearables prerequisite validation",
+    "TOM Description": "Validate wearables selection is blocked until device/plan prerequisite is met",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Wearables tab and attempt selection | Input: N/A | Expected: Wearables tab and attempt selection activated\n5. Action: Verify | Target: Prerequisite validation is shown and progression is blocked. | Input: N/A | Expected: Prerequisite validation is shown and progression is blocked.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens",
+    "Post_Verification": "Validation message Please select plan or device. is shown on wearables attempt.\nWearables selection is blocked until device and plan are selected.\nWearables selection becomes enabled after prerequisites are met.",
+    "TOM_NUM": "TOM_68"
+  },
+  {
+    "User_Journey": "Mobile PLP - Accessories prerequisite validation",
+    "TOM Description": "Validate accessories selection is blocked until device/plan prerequisite is met",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Accessories tab and attempt selection | Input: N/A | Expected: Accessories tab and attempt selection activated\n5. Action: Verify | Target: Prerequisite validation appears above tabs. | Input: N/A | Expected: Prerequisite validation appears above tabs.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens",
+    "Post_Verification": "Validation message Please select plan or device. is shown on accessories attempt.\nAccessories selection is blocked until device and plan are selected.\nAccessories selection becomes enabled after prerequisites are met.",
+    "TOM_NUM": "TOM_69"
+  },
+  {
+    "User_Journey": "Mobile PLP - Device care prerequisite validation",
+    "TOM Description": "Validate device care cannot be selected before a device is selected",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n5. Action: Verify | Target: Device care selection is blocked without device. | Input: N/A | Expected: Device care selection is blocked without device.\n6. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Device care selection is now enabled for the service. | Input: N/A | Expected: Device care selection is now enabled for the service.",
+    "Post_Verification": "Attempting device care selection with only a plan selected is blocked.\nNo device care add-on line is created while no device is selected.\nAfter selecting a compatible device, device care selection becomes enabled for that service.",
+    "TOM_NUM": "TOM_70"
+  },
+  {
+    "User_Journey": "Mobile PLP - Save and Resume full persistence",
+    "TOM Description": "Validate Save Quote and Resume Quote persist all Mobile PLP selections",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Save quote and exit | Input: N/A | Expected: Save quote and exit activated\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Click | Target: Resume Quote | Input: N/A | Expected: Resume Quote activated\n7. Action: Verify | Target: Resume opens device/plan listing page for same quote context. | Input: N/A | Expected: Resume opens device/plan listing page for same quote context.\n8. Action: Verify | Target: All previously saved selections persist (device, plan, wearables, accessories, quantities, delivery context). | Input: N/A | Expected: All previously saved selections persist (device, plan, wearables, accessories, quantities, delivery context).",
+    "Post_Verification": "Changes have been made to your order successfully. is displayed on save.\nSaved quote is found in Search all quotes with expected status (Quote Submitted or Quote In Progress as applicable).\nResume Quote opens the same quote context and restores device, plan, wearables, accessories, quantities, and delivery values.",
+    "TOM_NUM": "TOM_71"
+  },
+  {
+    "User_Journey": "Mobile PLP - Device-first selection (multi-SIM qty=2)",
+    "TOM Description": "Validate device-first flow and compatible plan refresh",
+    "Order_Steps": "1. Action: Select Option | Target: SIM Quantity selector | Input: 2 | Expected: Quantity set to 2\n2. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n3. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n4. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n5. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n6. Action: Click | Target: Device | Input: N/A | Expected: Selected state applied\n7. Action: Verify | Target: Device tile changes to selected. | Input: N/A | Expected: Device tile changes to selected.\n8. Action: Verify | Target: Plans list refreshes for compatible plans. | Input: N/A | Expected: Plans list refreshes for compatible plans.\n9. Action: Click | Target: Plan | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Selected state is applied only to the tapped device tile.\nPlan list refreshes and only compatible plans remain selectable.\nSelecting one compatible plan marks that plan as Selected for the same service context.",
+    "TOM_NUM": "TOM_72"
+  },
+  {
+    "User_Journey": "Mobile PLP - RTSA technical error (RTSA variant)",
+    "TOM Description": "Validate RTSA technical error handling message",
+    "Order_Steps": "1. Action: Click | Target: Check store stock | Input: N/A | Expected: RTSA/stock check executed\n2. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n3. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n4. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n5. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Trigger stock check with technical error response.\n7. Action: Verify | Target: Warning under impacted item tile. | Input: N/A | Expected: Warning under impacted item tile.\n8. Action: Verify | Target: Message remains visible for that item. | Input: N/A | Expected: Message remains visible for that item.\n9. Action: Click | Target: Add to cart button | Input: N/A | Expected: New service added to cart",
+    "Post_Verification": "Warning message shown: Stock availability and/or Estimated Shipment Date check failed....\nWarning remains visible for the impacted item tile.\nAlternate valid item can still be added to cart.",
+    "TOM_NUM": "TOM_73"
+  },
+  {
+    "User_Journey": "Mobile PLP - Bundle calculation default (Save & Resume)",
+    "TOM Description": "Validate Calculate Bundle & Save action default flow",
+    "Order_Steps": "1. Action: Click | Target: Save Quote | Input: N/A | Expected: Quote saved for resume\n2. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n3. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n4. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n5. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n6. Action: Verify | Target: UI element | Input: N/A | Expected: Create eligible cart baseline with multiple services.\n7. Action: Click | Target: Calculate Bundle & Save | Input: N/A | Expected: Calculate Bundle & Save activated\n8. Action: Verify | Target: UI element | Input: N/A | Expected: Wait for processing completion.\n9. Action: Verify | Target: Cart remains editable after calculation. | Input: N/A | Expected: Cart remains editable after calculation.",
+    "Post_Verification": "Message shown: Bundle and save calculation is completed..\nCalculation completes without silent timeout.\nCart remains editable after completion.",
+    "TOM_NUM": "TOM_74"
+  },
+  {
+    "User_Journey": "Mobile PLP - Page shell (variant 0)",
+    "TOM Description": "Validate Mobile PLP page shell, quote context, and category tabs",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Verify | Target: Category tabs show mobile phones, tablets & mbb, bundles, wearables, and accessories. | Input: N/A | Expected: Category tabs show mobile phones, tablets & mbb, bundles, wearables, and accessories.\n6. Action: Click | Target: Create Quote | Input: N/A | Expected: Quote created and PDF available\n7. Action: Verify | Target: No redirect to fixed plp occurs. | Input: N/A | Expected: No redirect to fixed plp occurs.",
+    "Post_Verification": "Quote header shows customer John Citizen and quote number 1234567890.\nCoverage summary shows 4G - Available, 5G - Outdoor only, 5G NSA - Not available.\nTabs Mobile phones, Tablets & MBB, Bundles, Wearables, and Accessories are visible with Mobile phones active.",
+    "TOM_NUM": "TOM_75"
+  },
+  {
+    "User_Journey": "Mobile PLP - Mobile phones tab default (variant 1)",
+    "TOM Description": "Validate default controls and cards on Mobile phones tab",
+    "Order_Steps": "1. Action: Enter Text | Target: Login Username field | Input: CAREUSER1 | Expected: Username entered\n2. Action: Enter Text | Target: Login Password field | Input: <password> | Expected: Password entered\n3. Action: Click | Target: Login Submit button | Input: N/A | Expected: User authenticated and home accessible\n4. Action: Click | Target: Mobile PLP flow from quote context | Input: N/A | Expected: Mobile PLP flow from quote context opens\n5. Action: Click | Target: Sales Calculator | Input: N/A | Expected: Sales Calculator opens\n6. Action: Verify | Target: Controls: search, sort by, filter by brand, check delivery estimate, and same as coverage check. | Input: N/A | Expected: Controls: search, sort by, filter by brand, check delivery estimate, and same as coverage check.\n7. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied\n8. Action: Click | Target: Device/Plan Option | Input: N/A | Expected: Selected state applied",
+    "Post_Verification": "Controls Search, Sort by, Filter by brand, Check delivery estimate, and Same as coverage check are visible.\nEach visible device card shows stock state, price, attributes, Check store stock, and Select.\nAt least one plan tile shows proposition and entitlement fields with an enabled Select action.",
+    "TOM_NUM": "TOM_76"
+  }
+]
